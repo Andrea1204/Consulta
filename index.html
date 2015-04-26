@@ -16,7 +16,7 @@
             var promedio=parseInt($("#promedio").val());
             $.ajax({
             type:"POST",
-            url:"guardarDatos.php",
+            url:"http://andrea92.260mb.net/guardarDatos.php",
             data:"nombre="+nom+"&edad="+edad+"&promedio="+promedio,
             success: registro
         });
@@ -30,7 +30,7 @@
             btnConsulta.click(function cons(){
                 $.ajax({
                     type:"POST",
-                    url:"consulta.php",
+                    url:"http://andrea92.260mb.net/consulta.php",
                     data:"",
                     success: consultaDatos
                 });
@@ -60,7 +60,7 @@
                 var valConsulta=$("#valConsulta").val();
                 $.ajax({
                     type:"POST",
-                    url:"consultaBD2.php",
+                    url:"http://andrea92.260mb.net/consultaBD2.php",
                     data:"Id="+valConsulta,
                     success: consultaEstudiante
                 })
@@ -75,7 +75,7 @@
             btnConAct.click(function cargarDat(){
                 $.ajax({
                     type:"POST",
-                    url:"consulta.php",
+                    url:"http://andrea92.260mb.net/consulta.php",
                     data:"",
                     success: cargarDatos
                 });
@@ -91,7 +91,7 @@
             var Id=parseInt($("#nomActualizar").val());
             $.ajax({
                 type:"POST",
-                url:"consultaBD2.php",
+                url:"http://andrea92.260mb.net/consultaBD2.php",
                 data:"Id="+Id,
                 success: cargarDatosAct
             });
@@ -129,7 +129,7 @@
                 else{
                     $.ajax({
                         type:"POST",
-                        url:"actualizar.php",
+                        url:"http://andrea92.260mb.net/actualizar.php",
                         data:"id="+id+"&nombre="+nombre+"&edad="+edad+"&promedio="+promedio,
                         success:actualizacion
                     });
@@ -143,7 +143,7 @@
                 btnConsEliminar.click(function conEliminar(){                    
                     $.ajax({
                         type:"POST",
-                        url:"consulta.php",
+                        url:"http://andrea92.260mb.net/consulta.php",
                         data:"",
                         success:consultaAntEliminar
                         
@@ -160,7 +160,7 @@
                     var idEliminar=parseInt($("#idEliminar").val());
                     $.ajax({
                         type:"POST",
-                        url:"eliminar.php",
+                        url:"http://andrea92.260mb.net/eliminar.php",
                         data:"Id="+idEliminar,
                         success:Eliminacion
                     });
